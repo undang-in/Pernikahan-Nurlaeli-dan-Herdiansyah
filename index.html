@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Nurlaeli & Herdiansyah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Parisienne&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6D5D6E;
+            --secondary: #4F4557;
+            --accent: #F4EEE0;
+            --light: #F8F5F1;
+            --dark: #393646;
+            --soft-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --strong-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        /* Cover Page */
+        .cover-page {
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(109, 93, 110, 0.9), rgba(79, 69, 87, 0.9)), 
+                        url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .invitation-container {
+            position: relative;
+            z-index: 3;
+            padding: 1rem;
+            width: 90%;
+            max-width: 320px;
+            perspective: 1000px;
+        }
+
+        .invitation-card {
+            border-radius: 12px;
+            padding: 2rem 1.5rem;
+            position: relative;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            color: white;
+            transform-style: preserve-3d;
+            transition: all 0.3s ease;
+            box-shadow: var(--soft-shadow);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            overflow: hidden;
+        }
+
+        .invitation-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(30deg);
+            z-index: -1;
+        }
+
+        .invitation-card:hover {
+            transform: translateY(-3px) rotateX(3deg) rotateY(3deg);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .title {
+            font-family: 'Parisienne', cursive;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+            letter-spacing: 1px;
+            font-weight: 400;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .couple-name {
+            font-family: 'Parisienne', cursive;
+            font-size: 2.8rem;
+            margin: 1rem 0;
+            color: var(--accent);
+            line-height: 1.1;
+            font-weight: 400;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .to {
+            margin: 1.5rem 0;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            position: relative;
+            display: inline-block;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .to:before, .to:after {
+            content: '✽';
+            position: absolute;
+            width: 20px;
+            height: 1px;
+            color: var(--accent);
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.9rem;
+        }
+
+        .to:before {
+            left: -25px;
+        }
+
+        .to:after {
+            right: -25px;
+        }
+
+        .guest-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.8rem;
+            border-bottom: 1px solid var(--accent);
+            padding-bottom: 0.4rem;
+            margin: 1rem;
+            display: block;
+            letter-spacing: 1px;
+            font-weight: 500;
+            color: white;
+        }
+
+        .btn-open {
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            padding: 0.8rem 2rem;
+            font-size: 0.9rem;
+            margin-top: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 50px;
+            font-weight: 500;
+            box-shadow: var(--soft-shadow);
+        }
+
+        .btn-open:hover {
+            background: var(--accent);
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(244, 238, 224, 0.3);
+        }
+
+        .btn-open:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .btn-open:hover:before {
+            left: 100%;
+        }
+
+        /* Floating Elements */
+        .floating-element {
+            position: absolute;
+            opacity: 0.7;
+            z-index: 2;
+            animation: float 15s infinite linear;
+            filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.1));
+            pointer-events: none;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Main Content */
+        .main-content {
+            display: none;
+        }
+
+        /* Section 1: Hero with Timer */
+        .section-hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1.5rem;
+            background: linear-gradient(rgba(109, 93, 110, 0.9), rgba(79, 69, 87, 0.9)), 
+                        url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .couple-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            margin-bottom: 1.5rem;
+            box-shadow: var(--soft-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .couple-photo:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(244, 238, 224, 0.3);
+        }
+
+        .couple-names {
+            font-family: 'Parisienne', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            position: relative;
+            display: inline-block;
+        }
+
+        .couple-names:after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .wedding-date {
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 0.3rem;
+            flex-wrap: nowrap;
+        }
+
+        .countdown-item {
+            background: rgba(244, 238, 224, 0.2);
+            color: white;
+            padding: 0.5rem;
+            border-radius: 8px;
+            min-width: 50px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid var(--accent);
+            transition: all 0.3s ease;
+            box-shadow: var(--soft-shadow);
+        }
+
+        .countdown-item:hover {
+            transform: translateY(-3px);
+            background: rgba(244, 238, 224, 0.3);
+            box-shadow: 0 8px 20px rgba(244, 238, 224, 0.2);
+        }
+
+        .countdown-number {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .countdown-label {
+            font-size: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.2rem;
+            font-weight: 500;
+        }
+
+        /* Section 2: Couple Introduction */
+        .section-couple {
+            padding: 3rem 1.5rem;
+            text-align: center;
+            background-color: white;
+            position: relative;
+        }
+
+        .section-title {
+            font-family: 'Parisienne', cursive;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+            font-weight: 400;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .opening-message {
+            max-width: 100%;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+            font-size: 1rem;
+            color: #555;
+            padding: 0 1rem;
+        }
+
+        .couple-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .bride, .groom {
+            flex: 1;
+            padding: 1.5rem;
+            position: relative;
+            transition: all 0.3s ease;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 280px;
+        }
+
+        .bride:hover, .groom:hover {
+            transform: translateY(-5px);
+        }
+
+        .couple-portrait {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid var(--primary);
+            box-shadow: var(--soft-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .couple-portrait:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(109, 93, 110, 0.2);
+        }
+
+        .couple-name {
+            font-family: 'Parisienne', cursive;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            font-weight: 400;
+        }
+
+        .parents-name {
+            font-style: italic;
+            margin-top: 0.8rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Section 3: Event Schedule */
+        .section-events {
+            padding: 3rem 1.5rem;
+            background-color: var(--light);
+            text-align: center;
+            position: relative;
+        }
+
+        .events-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .event-card {
+            background: white;
+            padding: 2rem 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--soft-shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border-top: 3px solid var(--primary);
+            margin: 0 auto;
+            width: 100%;
+            max-width: 280px;
+        }
+
+        .event-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--primary);
+            z-index: 1;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(109, 93, 110, 0.15);
+        }
+
+        .event-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .event-card:hover .event-icon {
+            transform: scale(1.05);
+        }
+
+        .event-title {
+            font-family: 'Parisienne', cursive;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .event-date, .event-time, .event-location {
+            margin-bottom: 0.6rem;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        .event-date {
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 1rem;
+        }
+
+        .event-location {
+            margin-top: 1rem;
+            font-weight: 500;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Section 4: Guest Messages */
+        .section-messages {
+            padding: 6rem 2rem;
+            background-color: white;
+            text-align: center;
+            position: relative;
+        }
+        .section-messages:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, var(--light), transparent);
+            z-index: 1;
+        }
+        .message-form {
+            max-width: 600%;
+            margin: 3rem auto;
+            padding: 2.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: var(--soft-shadow);
+            text-align: left;
+            border-top: 4px solid var(--primary);
+            position: relative;
+        }
+
+        .message-form:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary);
+            z-index: 1;
+        }
+
+        .message-form label {
+            display: block;
+            margin: 1rem 0 0.5rem;
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .message-form input,
+        .message-form select,
+        .message-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .message-form input:focus,
+        .message-form select:focus,
+        .message-form textarea:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(109, 93, 110, 0.1);
+        }
+
+        .message-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .inline-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: #555;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .inline-stats .stat {
+            background: var(--light);
+            border: 1px solid #eee;
+            padding: 0.4rem 0.8rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+            gap: 1rem;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            flex: 1;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(109, 93, 110, 0.3);
+        }
+        .attendance-stats {
+            max-width: 600px;
+            margin: 3rem auto;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .stat-boxes {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-box {
+            flex: 1;
+            min-width: 200px;
+            padding: 1.5rem;
+            background: var(--light);
+            border-radius: 10px;
+            border: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--gold);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .comment-container {
+            max-width: 800px;
+            margin: 3rem auto 0;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 0;
+            position: relative;
+            border-left: 4px solid var(--gold);
+            max-height: 400px; /* Adjust height as needed */
+            overflow-y: auto;
+        }
+
+        .comment-list {
+            padding: 1.5rem;
+        }
+
+        .comment-item {
+            padding: 1rem 0;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .comment-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            align-items: center;
+        }
+
+        .comment-name {
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 0.9rem;
+        }
+
+        .comment-attendance {
+            font-size: 0.7rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 50px;
+            background: var(--light);
+            color: var(--dark);
+        }
+
+        .comment-attendance.hadir {
+            background: rgba(76, 175, 80, 0.1);
+            color: #4CAF50;
+        }
+
+        .comment-attendance.tidak {
+            background: rgba(244, 67, 54, 0.1);
+            color: #F44336;
+        }
+
+        .comment-text {
+            color: #555;
+            line-height: 1.6;
+            margin: 0.5rem 0;
+            font-size: 0.85rem;
+            text-align: left;
+            padding-right: 1rem;
+        }
+
+        .comment-date {
+            font-size: 0.7rem;
+            color: #999;
+            text-align: right;
+        }
+
+        /* Custom scrollbar */
+        .comment-container::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .comment-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .comment-container::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 10px;
+        }
+
+        .comment-container::-webkit-scrollbar-thumb:hover {
+            background: #B7950B;
+        }
+
+        .sticker-picker {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sticker-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .sticker-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .sticker-item {
+            font-size: 2rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+            padding: 0.5rem;
+            border-radius: 5px;
+        }
+
+        .sticker-item:hover {
+            background: #f5f5f5;
+            transform: scale(1.1);
+        }
+
+        .close-sticker {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .close-sticker:hover {
+            color: var(--dark);
+        }
+        .delete-comment {
+            background-color: #ff4d4f;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            margin-top: 5px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .delete-comment:hover {
+            background-color: #d9363e;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .button-group {
+                flex-direction: column;
+            }
+            
+            .stat-boxes {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .stat-box {
+                min-width: 100%;
+            }
+            
+            .sticker-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        /* Loading Overlay */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            display: none;
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .notification {
+            position: fixed;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: white;
+            padding: 10px 18px;
+            border-radius: 50px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            display: none;
+            animation: fadeInUp 0.3s ease forwards;
+            font-size: 0.8rem;
+            max-width: 90%;
+            text-align: center;
+        }
+
+        .btn-submit {
+            position: relative;
+        }
+
+        .btn-submit .loading {
+            display: none;
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 18px;
+            height: 18px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top: 2px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        /* Section 5: Digital Gifts */
+        .section-gifts {
+            padding: 3rem 1.5rem;
+            background-color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .gift-container {
+            max-width: 100%;
+            margin: 2rem auto 0;
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--soft-shadow);
+            padding: 1.5rem;
+            border-top: 3px solid var(--primary);
+            position: relative;
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+
+        .gift-container:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--primary);
+            z-index: 1;
+        }
+
+        .gift-intro {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #555;
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+
+        .gift-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .gift-method {
+            flex: 1;
+            padding: 1.2rem;
+            border-radius: 12px;
+            background: white;
+            border: 1px solid #eee;
+            transition: all 0.3s ease;
+            position: relative;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .gift-method:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(109, 93, 110, 0.1);
+            border-color: var(--primary);
+        }
+
+        .gift-method-title {
+            font-family: 'Parisienne', cursive;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-weight: 400;
+        }
+
+        .gift-method-icon {
+            font-size: 1.6rem;
+            color: var(--primary);
+        }
+
+        .gift-detail {
+            margin: 0.8rem 0;
+            padding: 0.6rem;
+            background: var(--light);
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .gift-label {
+            font-weight: 500;
+            color: #555;
+        }
+
+        .gift-value {
+            font-weight: 600;
+            color: var(--dark);
+            word-break: break-all;
+            text-align: right;
+        }
+
+        .copy-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            width: 100%;
+        }
+
+        .copy-btn:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        .copy-btn.copied {
+            background: #4CAF50;
+        }
+
+        .gift-note {
+            margin-top: 1.5rem;
+            font-size: 0.8rem;
+            color: #777;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .qr-code {
+            width: 130px;
+            height: 130px;
+            margin: 1rem auto;
+            background: white;
+            padding: 0.5rem;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .qr-code:hover {
+            transform: scale(1.03);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .qr-code img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 3rem 1.5rem;
+            position: relative;
+        }
+
+        .footer-text {
+            max-width: 100%;
+            margin: 0 auto;
+            line-height: 1.6;
+            font-size: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .signature {
+            font-family: 'Parisienne', cursive;
+            font-size: 1.8rem;
+            margin-top: 1.5rem;
+            color: var(--accent);
+            position: relative;
+            z-index: 2;
+            font-weight: 400;
+        }
+
+        /* Floating Music Player */
+        .music-player {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            width: 45px;
+            height: 45px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 100;
+            box-shadow: 0 5px 15px rgba(109, 93, 110, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .music-player:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(109, 93, 110, 0.4);
+            background: var(--secondary);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.8s;
+        }
+
+        /* Extra small devices (phones, 360px and down) */
+        @media (max-width: 360px) {
+            .couple-name {
+                font-size: 2.2rem;
+            }
+            
+            .couple-names {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .wedding-date {
+                font-size: 0.9rem;
+            }
+            
+            .countdown-item {
+                min-width: 50px;
+                padding: 0.5rem;
+            }
+            
+            .countdown-number {
+                font-size: 1rem;
+            }
+            
+            .countdown-label {
+                font-size: 0.5rem;
+            }
+            
+            .event-title {
+                font-size: 1.8rem;
+            }
+            
+            .event-icon {
+                font-size: 2rem;
+            }
+            
+            .guest-name {
+                font-size: 0.8rem;
+            }
+            
+            .btn-open {
+                padding: 0.6rem 1.5rem;
+                font-size: 0.8rem;
+            }
+            
+            .message-form {
+                padding: 2rem;
+            }
+            
+            .gift-container {
+                padding: 1.2rem;
+            }
+            
+            .gift-method-title {
+                font-size: 1.6rem;
+            }
+            
+            .footer-text {
+                font-size: 0.9rem;
+            }
+            
+            .signature {
+                font-size: 1.6rem;
+            }
+            
+            .music-player {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+                bottom: 10px;
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cover Page -->
+    <div class="cover-page" id="coverPage">
+        <!-- Floating elements -->
+        <div class="floating-element" style="width: 30px; height: 30px; top: 10%; left: 10%; animation-duration: 20s;">✽</div>
+        <div class="floating-element" style="width: 40px; height: 40px; top: 20%; left: 80%; animation-duration: 25s;">✽</div>
+        <div class="floating-element" style="width: 25px; height: 25px; top: 70%; left: 15%; animation-duration: 18s;">✽</div>
+        <div class="floating-element" style="width: 35px; height: 35px; top: 80%; left: 70%; animation-duration: 22s;">✽</div>
+        <div class="floating-element" style="width: 30px; height: 30px; top: 30%; left: 50%; animation-duration: 17s;">✽</div>
+        
+        <div class="invitation-container">
+            <div class="invitation-card animate__animated animate__fadeIn">
+                <div class="title">The Wedding Of</div>
+                <div class="couple-name">Leli & Herdi</div>
+                <div class="to">Kepada Yth.</div>
+                <div class="guest-name" id="guestName">Nama Tamu</div>
+                <button class="btn-open" id="openInvitation">Buka Undangan</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Section 1: Hero with Timer -->
+        <section class="section-hero">
+            <h1 class="couple-names animate-fadeInUp delay-1">Nurlaeli & Herdiansyah</h1>
+            <p class="wedding-date animate-fadeInUp delay-1">Kamis, 26 Juni 2025</p>
+            
+            <div class="countdown">
+                <div class="countdown-item animate-fadeInUp delay-2">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-label">Hari</div>
+                </div>
+                <div class="countdown-item animate-fadeInUp delay-2">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-label">Jam</div>
+                </div>
+                <div class="countdown-item animate-fadeInUp delay-3">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-label">Menit</div>
+                </div>
+                <div class="countdown-item animate-fadeInUp delay-3">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div class="countdown-label">Detik</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Couple Introduction -->
+        <section class="section-couple">
+            <h2 class="section-title animate-fadeInUp">Assalamu'alaikum</h2>
+            <p class="opening-message animate-fadeInUp delay-1">
+                Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, 
+                kami bermaksud menyelenggarakan pernikahan putra-putri kami yaitu:
+            </p>
+            
+            <div class="couple-info">
+                <div class="groom animate-fadeInUp delay-2">
+                    <h3 class="couple-name">Nurlaeli</h3>
+                    <p>Putri dari</p>
+                    <p class="parents-name">Bapak Baharuddin & Ibu Niar</p>
+                </div>
+                <h5 class="couple-name">&</h3>               
+                <div class="bride animate-fadeInUp delay-3">
+                    <h3 class="couple-name">Herdiansyah</h3>
+                    <p>Putra dari</p>
+                    <p class="parents-name">Bapak Herman & Ibu Niama</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Event Schedule -->
+        <section class="section-events">
+            <h2 class="section-title animate-fadeInUp">Jadwal Acara</h2>
+            
+            <div class="events-container">
+                <div class="event-card animate-fadeInUp delay-2">
+                    <div class="event-icon">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <h3 class="event-title">Resepsi</h3>
+                    <p class="event-date">Kamis, 26 Juni 2025</p>
+                    <p class="event-time">09.00 WITA - Selesai</p>
+                    <p class="event-location">Desa Balibo<br>Kec. Kindang, Bulukumba</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Guest Messages (Komentar) -->
+        <section class="section-messages">
+            <h2 class="section-title animate-fadeInUp"><i class="fas fa-comments"></i> Ucapan & Doa</h2>
+
+            <!-- Form Ucapan -->
+            <div class="notification" id="notification"></div>
+            <div class="message-form animate-fadeInUp delay-1">
+
+                <form id="commentForm">
+                    <label for="name">Nama</label>
+                    <input type="text" id="name" required placeholder="Masukkan nama Anda">
+
+                    <label for="attendance">Konfirmasi Kehadiran</label>
+                    <select id="attendance" required>
+                        <option value="hadir">Saya berencana hadir</option>
+                        <option value="tidak">Maaf saya tidak bisa hadir</option>
+                    </select>
+
+                    <label for="comment">Pesan</label>
+                    <textarea id="comment" required placeholder="Tulis ucapan dan doa untuk mempelai..."></textarea>
+
+                    <div class="button-group">
+                        <button type="button" class="btn-secondary" id="stickerBtn"><i class="far fa-smile"></i> Tambah Stiker</button>
+                        <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> Kirim Ucapan</button>
+                    </div>
+                    <div class="loading-overlay" id="loadingOverlay">
+                        <div class="loading-spinner"></div>
+                    </div>
+                    <div class="notification" id="notification" style="display: none;"></div>
+                    <!-- Tambahkan statistik di sini -->
+                    <div class="inline-stats">
+                        <div class="stat" id="attendingInline">
+                            <i class="fas fa-check-circle"></i> <span id="attendingCount">0</span> hadir
+                        </div>
+                        <div class="stat" id="notAttendingInline">
+                            <i class="fas fa-times-circle"></i> <span id="notAttendingCount">0</span> tidak hadir
+                        </div>
+                        <div class="stat" id="totalCommentsInline">
+                            <i class="fas fa-comment-dots"></i> <span id="totalComments">0</span> ucapan
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Daftar Komentar -->
+            <div class="comment-container">
+                <div class="comment-list" id="commentList">
+                    <!-- Komentar akan muncul di sini -->
+                    <div class="comment-item">
+                        <div class="comment-header">
+                            <span class="comment-name">Contoh Nama</span>
+                            <span class="comment-attendance hadir">Hadir</span>
+                        </div>
+                        <p class="comment-text">Ini adalah contoh ucapan. Semoga pernikahan kalian bahagia selalu! ❤️</p>
+                        <div class="comment-date">12 Des 2025, 10:30</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sticker Picker Modal -->
+            <div class="sticker-picker" id="stickerPicker">
+                <div class="sticker-container">
+                    <span class="close-sticker" id="closeSticker">&times;</span>
+                    <h3>Pilih Stiker</h3>
+                    <div class="sticker-grid">
+                        <div class="sticker-item" data-sticker="❤️">❤️</div>
+                        <div class="sticker-item" data-sticker="😊">😊</div>
+                        <div class="sticker-item" data-sticker="🎉">🎉</div>
+                        <div class="sticker-item" data-sticker="💐">💐</div>
+                        <div class="sticker-item" data-sticker="🥂">🥂</div>
+                        <div class="sticker-item" data-sticker="✨">✨</div>
+                        <div class="sticker-item" data-sticker="🎊">🎊</div>
+                        <div class="sticker-item" data-sticker="💖">💖</div>
+                        <div class="sticker-item" data-sticker="👰">👰</div>
+                        <div class="sticker-item" data-sticker="🤵">🤵</div>
+                        <div class="sticker-item" data-sticker="💑">💑</div>
+                        <div class="sticker-item" data-sticker="🎁">🎁</div>
+                        <div class="sticker-item" data-sticker="🥳">🥳</div>
+                        <div class="sticker-item" data-sticker="🙏">🙏</div>
+                        <div class="sticker-item" data-sticker="😍">😍</div>
+                        <div class="sticker-item" data-sticker="💕">💕</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p class="footer-text animate-fadeInUp">
+                Terima kasih atas doa dan restu yang telah diberikan. 
+                Semoga Allah SWT membalas semua kebaikan Anda.
+            </p>
+            <p class="signature animate-fadeInUp delay-1">Keluarga Besar<br>Nurlaeli & Herdiansyah</p>
+        </footer>
+    </div>
+
+    <!-- Floating Music Player -->
+    <div class="music-player" id="musicPlayer" title="Putar Musik">
+        <i class="fas fa-music"></i>
+        <audio id="bgMusic" loop>
+            <source src="music/musik2.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script>
+        // Open Invitation
+        document.getElementById('openInvitation').addEventListener('click', function() {
+            document.getElementById('coverPage').style.display = 'none';
+            document.getElementById('mainContent').style.display = 'block';
+            document.body.style.overflow = 'auto';
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+            
+            // Play music
+            document.getElementById('bgMusic').play();
+            
+            // Create more floating elements
+            createFloatingElements();
+        });
+
+        // Function to get URL parameter
+        function getUrlParameter(name) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(window.location.href);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        // Set guest name from URL parameter
+        document.addEventListener('DOMContentLoaded', function() {
+            var guestName = getUrlParameter('to');
+            if (guestName) {
+                document.getElementById('guestName').textContent = guestName;
+            }
+            
+            // Create initial floating elements
+            createFloatingElements();
+        });
+
+        // Countdown Timer
+        function updateCountdown() {
+            const weddingDate = new Date('June 26, 2025 09:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Konfigurasi Google Sheets API
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyYwGXJ-LD-8Q76lkbGVERRAPhj5PqxuVp7-lMiOYIP5lc8SeTVG2GPAq5aM-1SqZD6bw/exec';
+
+        // Fungsi Komentar
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load komentar dari Google Sheets
+            loadComments();
+            
+            // Form submission
+            // Ganti bagian form submission dengan ini:
+            document.getElementById('commentForm').addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('name').value.trim();
+                const attendance = document.getElementById('attendance').value;
+                const commentText = document.getElementById('comment').value.trim();
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const notification = document.getElementById('notification');
+                
+                if (name && commentText) {
+                    try {
+                        // Tampilkan loading
+                        submitBtn.innerHTML = '';
+                        submitBtn.classList.add('btn-loading');
+                        submitBtn.disabled = true;
+                        
+                        const formData = new FormData();
+                        formData.append('name', name);
+                        formData.append('attendance', attendance);
+                        formData.append('comment', commentText);
+                        
+                        const response = await fetch(SCRIPT_URL, {
+                            method: 'POST',
+                            body: formData
+                        });
+                        
+                        const result = await response.json();
+                        
+                        if (result.status === "success") {
+                            // Reset form
+                            this.reset();
+                            
+                            // Tampilkan notifikasi
+                            // Ganti bagian notifikasi dengan:
+                            notification.textContent = 'Ucapan Anda telah terkirim! Terima kasih.';
+                            notification.classList.add('show');
+
+                            // Sembunyikan notifikasi setelah 3 detik
+                            setTimeout(() => {
+                                notification.classList.remove('show');
+                            }, 3000);
+                            
+                            // Reload komentar
+                            loadComments();
+                        } else {
+                            throw new Error(result.message || 'Gagal menyimpan data');
+                        }
+                    } catch (error) {
+                        console.error('Error:', error);
+                        notification.textContent = 'Gagal mengirim ucapan: ' + error.message;
+                        notification.style.backgroundColor = 'rgba(244, 67, 54, 0.1)';
+                        notification.style.color = '#F44336';
+                        notification.style.borderColor = '#F44336';
+                        notification.style.display = 'block';
+                        
+                        setTimeout(() => {
+                            notification.style.display = 'none';
+                        }, 3000);
+                    } finally {
+                        // Kembalikan tombol ke keadaan semula
+                        submitBtn.classList.remove('btn-loading');
+                        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Kirim Ucapan';
+                        submitBtn.disabled = false;
+                    }
+                }
+            });
+            
+            // Fungsi untuk memuat komentar dari Google Sheets
+            async function loadComments() {
+                try {
+                    const response = await fetch(`${SCRIPT_URL}?t=${Date.now()}`);
+                    const result = await response.json();
+                    
+                    if (result.status === "success") {
+                        updateCommentList(result.comments);
+                        updateStats(result.comments);
+                    } else {
+                        throw new Error(result.message || 'Gagal memuat komentar');
+                    }
+                } catch (error) {
+                    console.error('Error loading comments:', error);
+                    alert('Gagal memuat komentar: ' + error.message);
+                }
+            }
+            
+            // Sticker picker functionality (tetap sama seperti sebelumnya)
+            const stickerBtn = document.getElementById('stickerBtn');
+            const stickerPicker = document.getElementById('stickerPicker');
+            const closeSticker = document.getElementById('closeSticker');
+            const stickerItems = document.querySelectorAll('.sticker-item');
+            const commentField = document.getElementById('comment');
+            
+            stickerBtn.addEventListener('click', function() {
+                stickerPicker.style.display = 'flex';
+            });
+            
+            closeSticker.addEventListener('click', function() {
+                stickerPicker.style.display = 'none';
+            });
+            
+            stickerItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const sticker = this.getAttribute('data-sticker');
+                    commentField.value += sticker;
+                    stickerPicker.style.display = 'none';
+                    commentField.focus();
+                });
+            });
+            
+            stickerPicker.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.style.display = 'none';
+                }
+            });
+        });
+
+        // Fungsi untuk memperbarui daftar komentar
+        function updateCommentList(comments) {
+            const commentList = document.getElementById('commentList');
+
+            if (comments.length === 0) {
+                commentList.innerHTML = '<p style="text-align: center; color: #666;">Belum ada ucapan. Jadilah yang pertama mengirimkan ucapan!</p>';
+                return;
+            }
+
+            commentList.innerHTML = '';
+
+            comments.forEach(comment => {
+                const commentItem = document.createElement('div');
+                commentItem.className = 'comment-item';
+
+                const attendanceClass = comment.attendance === 'hadir' ? 'hadir' : 'tidak';
+                const attendanceText = comment.attendance === 'hadir' ? 'Hadir' : 'Tidak Hadir';
+
+                // Konversi tanggal ke format Indonesia dan zona waktu WITA
+                const dateObj = new Date(comment.date);
+                const formattedDate = new Intl.DateTimeFormat('id-ID', {
+                    timeZone: 'Asia/Makassar', // Zona WITA
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit'
+                }).format(dateObj);
+
+                commentItem.innerHTML = `
+                    <div class="comment-header">
+                        <span class="comment-name">${comment.name}</span>
+                        <span class="comment-attendance ${attendanceClass}">${attendanceText}</span>
+                    </div>
+                    <p class="comment-text">${comment.text}</p>
+                    <div class="comment-date">${formattedDate}</div>
+                `;
+
+                commentList.appendChild(commentItem);
+            });
+        }
+
+        // Fungsi untuk memperbarui statistik
+        function updateStats(comments) {
+            const attendingCount = comments.filter(c => c.attendance === 'hadir').length;
+            const notAttendingCount = comments.filter(c => c.attendance === 'tidak').length;
+            
+            document.getElementById('attendingCount').textContent = attendingCount;
+            document.getElementById('notAttendingCount').textContent = notAttendingCount;
+            document.getElementById('totalComments').textContent = comments.length;
+            document.getElementById('attendingCount').textContent = attendingCount;
+
+            // Tambahan untuk inline stats
+            document.getElementById('attendingInline').querySelector('span').textContent = attendingCount;
+            document.getElementById('notAttendingInline').querySelector('span').textContent = notAttendingCount;
+            document.getElementById('totalCommentsInline').querySelector('span').textContent = comments.length;
+
+        }
+        // Copy button functionality for gift section
+        document.addEventListener('DOMContentLoaded', function() {
+            const copyButtons = document.querySelectorAll('.copy-btn');
+            
+            copyButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    navigator.clipboard.writeText(textToCopy).then(() => {
+                        // Change button style temporarily
+                        const originalText = this.innerHTML;
+                        this.innerHTML = '<i class="fas fa-check"></i> Tersalin!';
+                        this.classList.add('copied');
+                        
+                        setTimeout(() => {
+                            this.innerHTML = originalText;
+                            this.classList.remove('copied');
+                        }, 2000);
+                    }).catch(err => {
+                        console.error('Failed to copy text: ', err);
+                        alert('Gagal menyalin teks. Silakan salin manual.');
+                    });
+                });
+            });
+        });
+
+        // Music Player Toggle
+        const musicPlayer = document.getElementById('musicPlayer');
+        const bgMusic = document.getElementById('bgMusic');
+        let isPlaying = false;
+        
+        musicPlayer.addEventListener('click', function() {
+            if (isPlaying) {
+                bgMusic.pause();
+                musicPlayer.innerHTML = '<i class="fas fa-music"></i>';
+                musicPlayer.title = "Putar Musik";
+            } else {
+                bgMusic.play();
+                musicPlayer.innerHTML = '<i class="fas fa-pause"></i>';
+                musicPlayer.title = "Jeda Musik";
+            }
+            isPlaying = !isPlaying;
+        });
+
+        // Create floating elements
+        function createFloatingElements() {
+            const elements = ['✽', '❀', '✿', '❁', '✦', '✧', '❊'];
+            const colors = ['#F4EEE0', '#D5C7BC', '#E8D5C8', '#F0E5D8'];
+            
+            for (let i = 0; i < 15; i++) {
+                const element = document.createElement('div');
+                element.className = 'floating-element';
+                element.textContent = elements[Math.floor(Math.random() * elements.length)];
+                element.style.color = colors[Math.floor(Math.random() * colors.length)];
+                element.style.width = `${Math.random() * 20 + 15}px`;
+                element.style.height = element.style.width;
+                element.style.top = `${Math.random() * 80 + 10}%`;
+                element.style.left = `${Math.random() * 80 + 10}%`;
+                element.style.animationDuration = `${Math.random() * 10 + 15}s`;
+                element.style.animationDelay = `${Math.random() * 5}s`;
+                element.style.fontSize = element.style.width;
+                
+                if (Math.random() > 0.5) {
+                    element.style.animationDirection = 'reverse';
+                }
+                
+                document.body.appendChild(element);
+            }
+        }
+    </script>
+</body>
+</html>
